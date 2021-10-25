@@ -1,8 +1,3 @@
-.globl _start
-.text
-_start:
-    call main
-
 .globl _syscall
 _syscall:
     movq %rdi, %rax
@@ -14,4 +9,5 @@ _syscall:
     movq 8(%rsp), %r9
     syscall
     ret
+
 
